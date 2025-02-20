@@ -1,111 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NCERT Books</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #121212;
-            color: white;
-            padding: 20px;
-        }
-        .button {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .hidden {
-            display: none;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { width: 80%; margin: auto; }
+        .subject { margin: 20px 0; }
+        .chapter-list { list-style-type: none; padding: 0; }
+        .chapter-list li { margin: 10px 0; }
     </style>
 </head>
 <body>
-    <h1>NCERT Books</h1>
-    <div id="classSelection">
-        <h2>Select Class:</h2>
-        <button class="button" onclick="selectClass(6)">Class 6</button>
-        <button class="button" onclick="selectClass(7)">Class 7</button>
-        <button class="button" onclick="selectClass(8)">Class 8</button>
-        <button class="button" onclick="selectClass(9)">Class 9</button>
-        <button class="button" onclick="selectClass(10)">Class 10</button>
+    <div class="container">
+        <h1>NCERT Books (Class 6 to 10)</h1><div class="subject">
+        <h2>Science</h2>
+        <ul class="chapter-list">
+            <li><a href="https://ncert.nic.in/textbook/pdf/fesc101.pdf" target="_blank">Class 10 Science</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fesc91.pdf" target="_blank">Class 9 Science</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fesc81.pdf" target="_blank">Class 8 Science</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fesc71.pdf" target="_blank">Class 7 Science</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fesc61.pdf" target="_blank">Class 6 Science</a></li>
+        </ul>
     </div>
-    
-    <div id="subjectSelection" class="hidden">
-        <h2>Select Subject:</h2>
-        <button class="button" onclick="selectSubject('Science')">Science</button>
-        <button class="button" onclick="selectSubject('Social Studies')">Social Studies</button>
-        <button class="button" onclick="goBack('classSelection')">Back</button>
-    </div>
-    
-    <div id="chapterList" class="hidden">
-        <h2>Chapters:</h2>
-        <ul id="chapters"></ul>
-        <button class="button" onclick="goBack('subjectSelection')">Back</button>
-    </div>
-    
-    <script>
-        const ncertData = {
-            6: {
-                Science: ["Food - Where Does It Come From?", "Components of Food", "Fibre to Fabric", "Sorting Materials into Groups"],
-                "Social Studies": ["The Earth in the Solar System", "Globe - Latitudes and Longitudes", "Motions of the Earth"]
-            },
-            7: {
-                Science: ["Nutrition in Plants", "Nutrition in Animals", "Fibre to Fabric", "Heat"],
-                "Social Studies": ["Environment", "Inside Our Earth", "Our Changing Earth", "Air"]
-            },
-            8: {
-                Science: ["Crop Production and Management", "Microorganisms", "Synthetic Fibres and Plastics"],
-                "Social Studies": ["Resources", "Land, Soil, Water", "Mineral and Power Resources"]
-            },
-            9: {
-                Science: ["Matter in Our Surroundings", "Is Matter Around Us Pure?", "Atoms and Molecules"],
-                "Social Studies": ["India - Size and Location", "Physical Features of India", "Drainage"]
-            },
-            10: {
-                Science: ["Chemical Reactions and Equations", "Acids, Bases and Salts", "Metals and Non-Metals"],
-                "Social Studies": ["Resources and Development", "Forest and Wildlife Resources", "Water Resources"]
-            }
-        };
 
-        let selectedClass, selectedSubject;
-        
-        function selectClass(cls) {
-            selectedClass = cls;
-            document.getElementById("classSelection").classList.add("hidden");
-            document.getElementById("subjectSelection").classList.remove("hidden");
-        }
-        
-        function selectSubject(subject) {
-            selectedSubject = subject;
-            document.getElementById("subjectSelection").classList.add("hidden");
-            document.getElementById("chapterList").classList.remove("hidden");
-            const chapterList = document.getElementById("chapters");
-            chapterList.innerHTML = "";
-            ncertData[selectedClass][selectedSubject].forEach(chapter => {
-                let li = document.createElement("li");
-                li.textContent = chapter;
-                chapterList.appendChild(li);
-            });
-        }
-        
-        function goBack(section) {
-            document.getElementById("classSelection").classList.add("hidden");
-            document.getElementById("subjectSelection").classList.add("hidden");
-            document.getElementById("chapterList").classList.add("hidden");
-            document.getElementById(section).classList.remove("hidden");
-        }
-    </script>
+    <div class="subject">
+        <h2>History</h2>
+        <ul class="chapter-list">
+            <li><a href="https://ncert.nic.in/textbook/pdf/fhih101.pdf" target="_blank">Class 10 History</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fhih91.pdf" target="_blank">Class 9 History</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fhih81.pdf" target="_blank">Class 8 History</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fhih71.pdf" target="_blank">Class 7 History</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fhih61.pdf" target="_blank">Class 6 History</a></li>
+        </ul>
+    </div>
+
+    <div class="subject">
+        <h2>Civics</h2>
+        <ul class="chapter-list">
+            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc101.pdf" target="_blank">Class 10 Civics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc91.pdf" target="_blank">Class 9 Civics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc81.pdf" target="_blank">Class 8 Civics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc71.pdf" target="_blank">Class 7 Civics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc61.pdf" target="_blank">Class 6 Civics</a></li>
+        </ul>
+    </div>
+
+    <div class="subject">
+        <h2>Geography</h2>
+        <ul class="chapter-list">
+            <li><a href="https://ncert.nic.in/textbook/pdf/fegg101.pdf" target="_blank">Class 10 Geography</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fegg91.pdf" target="_blank">Class 9 Geography</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fegg81.pdf" target="_blank">Class 8 Geography</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fegg71.pdf" target="_blank">Class 7 Geography</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/fegg61.pdf" target="_blank">Class 6 Geography</a></li>
+        </ul>
+    </div>
+
+    <div class="subject">
+        <h2>Economics</h2>
+        <ul class="chapter-list">
+            <li><a href="https://ncert.nic.in/textbook/pdf/feco101.pdf" target="_blank">Class 10 Economics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/feco91.pdf" target="_blank">Class 9 Economics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/feco81.pdf" target="_blank">Class 8 Economics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/feco71.pdf" target="_blank">Class 7 Economics</a></li>
+            <li><a href="https://ncert.nic.in/textbook/pdf/feco61.pdf" target="_blank">Class 6 Economics</a></li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
