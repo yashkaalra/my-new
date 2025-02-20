@@ -4,68 +4,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NCERT Books</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .container { width: 80%; margin: auto; }
-        .subject { margin: 20px 0; }
-        .chapter-list { list-style-type: none; padding: 0; }
-        .chapter-list li { margin: 10px 0; }
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #121212; color: white; }
+        .container { width: 80%; margin: auto; padding-top: 20px; }
+        .button { display: block; width: 80%; margin: 10px auto; padding: 10px; background: #1db954; color: white; border: none; cursor: pointer; font-size: 18px; border-radius: 5px; }
+        .hidden { display: none; }
     </style>
+    <script>
+        function showSubjects(classId) {
+            document.querySelectorAll('.subjects').forEach(el => el.classList.add('hidden'));
+            document.getElementById('subjects-' + classId).classList.remove('hidden');
+        }
+        function showChapters(subjectId) {
+            document.querySelectorAll('.chapters').forEach(el => el.classList.add('hidden'));
+            document.getElementById('chapters-' + subjectId).classList.remove('hidden');
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>NCERT Books (Class 6 to 10)</h1><div class="subject">
-        <h2>Science</h2>
-        <ul class="chapter-list">
-            <li><a href="https://ncert.nic.in/textbook/pdf/fesc101.pdf" target="_blank">Class 10 Science</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fesc91.pdf" target="_blank">Class 9 Science</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fesc81.pdf" target="_blank">Class 8 Science</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fesc71.pdf" target="_blank">Class 7 Science</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fesc61.pdf" target="_blank">Class 6 Science</a></li>
-        </ul>
+        <h1>Select Your Class</h1>
+        <button class="button" onclick="showSubjects(6)">Class 6</button>
+        <button class="button" onclick="showSubjects(7)">Class 7</button>
+        <button class="button" onclick="showSubjects(8)">Class 8</button>
+        <button class="button" onclick="showSubjects(9)">Class 9</button>
+        <button class="button" onclick="showSubjects(10)">Class 10</button><!-- Subjects for each class -->
+    <div id="subjects-6" class="subjects hidden">
+        <h2>Class 6 Subjects</h2>
+        <button class="button" onclick="showChapters('science6')">Science</button>
+        <button class="button" onclick="showChapters('history6')">History</button>
+        <button class="button" onclick="showChapters('civics6')">Civics</button>
+        <button class="button" onclick="showChapters('geography6')">Geography</button>
+        <button class="button" onclick="showChapters('economics6')">Economics</button>
     </div>
 
-    <div class="subject">
-        <h2>History</h2>
-        <ul class="chapter-list">
-            <li><a href="https://ncert.nic.in/textbook/pdf/fhih101.pdf" target="_blank">Class 10 History</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fhih91.pdf" target="_blank">Class 9 History</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fhih81.pdf" target="_blank">Class 8 History</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fhih71.pdf" target="_blank">Class 7 History</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fhih61.pdf" target="_blank">Class 6 History</a></li>
-        </ul>
+    <div id="subjects-7" class="subjects hidden">
+        <h2>Class 7 Subjects</h2>
+        <button class="button" onclick="showChapters('science7')">Science</button>
+        <button class="button" onclick="showChapters('history7')">History</button>
+        <button class="button" onclick="showChapters('civics7')">Civics</button>
+        <button class="button" onclick="showChapters('geography7')">Geography</button>
+        <button class="button" onclick="showChapters('economics7')">Economics</button>
     </div>
-
-    <div class="subject">
-        <h2>Civics</h2>
-        <ul class="chapter-list">
-            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc101.pdf" target="_blank">Class 10 Civics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc91.pdf" target="_blank">Class 9 Civics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc81.pdf" target="_blank">Class 8 Civics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc71.pdf" target="_blank">Class 7 Civics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fpoc61.pdf" target="_blank">Class 6 Civics</a></li>
-        </ul>
+    
+    <div id="subjects-8" class="subjects hidden">
+        <h2>Class 8 Subjects</h2>
+        <button class="button" onclick="showChapters('science8')">Science</button>
+        <button class="button" onclick="showChapters('history8')">History</button>
+        <button class="button" onclick="showChapters('civics8')">Civics</button>
+        <button class="button" onclick="showChapters('geography8')">Geography</button>
+        <button class="button" onclick="showChapters('economics8')">Economics</button>
     </div>
-
-    <div class="subject">
-        <h2>Geography</h2>
-        <ul class="chapter-list">
-            <li><a href="https://ncert.nic.in/textbook/pdf/fegg101.pdf" target="_blank">Class 10 Geography</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fegg91.pdf" target="_blank">Class 9 Geography</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fegg81.pdf" target="_blank">Class 8 Geography</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fegg71.pdf" target="_blank">Class 7 Geography</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/fegg61.pdf" target="_blank">Class 6 Geography</a></li>
-        </ul>
+    
+    <div id="subjects-9" class="subjects hidden">
+        <h2>Class 9 Subjects</h2>
+        <button class="button" onclick="showChapters('science9')">Science</button>
+        <button class="button" onclick="showChapters('history9')">History</button>
+        <button class="button" onclick="showChapters('civics9')">Civics</button>
+        <button class="button" onclick="showChapters('geography9')">Geography</button>
+        <button class="button" onclick="showChapters('economics9')">Economics</button>
     </div>
-
-    <div class="subject">
-        <h2>Economics</h2>
-        <ul class="chapter-list">
-            <li><a href="https://ncert.nic.in/textbook/pdf/feco101.pdf" target="_blank">Class 10 Economics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/feco91.pdf" target="_blank">Class 9 Economics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/feco81.pdf" target="_blank">Class 8 Economics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/feco71.pdf" target="_blank">Class 7 Economics</a></li>
-            <li><a href="https://ncert.nic.in/textbook/pdf/feco61.pdf" target="_blank">Class 6 Economics</a></li>
-        </ul>
+    
+    <div id="subjects-10" class="subjects hidden">
+        <h2>Class 10 Subjects</h2>
+        <button class="button" onclick="showChapters('science10')">Science</button>
+        <button class="button" onclick="showChapters('history10')">History</button>
+        <button class="button" onclick="showChapters('civics10')">Civics</button>
+        <button class="button" onclick="showChapters('geography10')">Geography</button>
+        <button class="button" onclick="showChapters('economics10')">Economics</button>
     </div>
 </div>
 
