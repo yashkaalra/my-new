@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCERT Books</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+        }
+        .button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>NCERT Books</h1>
+    <div id="classSelection">
+        <h2>Select Class:</h2>
+        <button class="button" onclick="selectClass(6)">Class 6</button>
+        <button class="button" onclick="selectClass(7)">Class 7</button>
+        <button class="button" onclick="selectClass(8)">Class 8</button>
+        <button class="button" onclick="selectClass(9)">Class 9</button>
+        <button class="button" onclick="selectClass(10)">Class 10</button>
+    </div>
+    
+    <div id="subjectSelection" class="hidden">
+        <h2>Select Subject:</h2>
+        <button class="button" onclick="selectSubject('Science')">Science</button>
+        <button class="button" onclick="selectSubject('Social Studies')">Social Studies</button>
+        <button class="button" onclick="goBack('classSelection')">Back</button>
+    </div>
+    
+    <div id="chapterList" class="hidden">
+        <h2>Chapters:</h2>
+        <ul id="chapters"></ul>
+        <button class="button" onclick="goBack('subjectSelection')">Back</button>
+    </div>
+    
+    <script>
+        const ncertData = {
+            6: {
+                Science: ["Food - Where Does It Come From?", "Components of Food", "Fibre to Fabric", "Sorting Materials into Groups"],
+                "Social Studies": ["The Earth in the Solar System", "Globe - Latitudes and Longitudes", "Motions of the Earth"]
+            },
+            7: {
+                Science: ["Nutrition in Plants", "Nutrition in Animals", "Fibre to Fabric", "Heat"],
+                "Social Studies": ["Environment", "Inside Our Earth", "Our Changing Earth", "Air"]
+            },
+            8: {
+                Science: ["Crop Production and Management", "Microorganisms", "Synthetic Fibres and Plastics"],
+                "Social Studies": ["Resources", "Land, Soil, Water", "Mineral and Power Resources"]
+            },
+            9: {
+                Science: ["Matter in Our Surroundings", "Is Matter Around Us Pure?", "Atoms and Molecules"],
+                "Social Studies": ["India - Size and Location", "Physical Features of India", "Drainage"]
+            },
+            10: {
+                Science: ["Chemical Reactions and Equations", "Acids, Bases and Salts", "Metals and Non-Metals"],
+                "Social Studies": ["Resources and Development", "Forest and Wildlife Resources", "Water Resources"]
+            }
+        };
+
+        let selectedClass, selectedSubject;
+        
+        function selectClass(cls) {
+            selectedClass = cls;
+            document.getElementById("classSelection").classList.add("hidden");
+            document.getElementById("subjectSelection").classList.remove("hidden");
+        }
+        
+        function selectSubject(subject) {
+            selectedSubject = subject;
+            document.getElementById("subjectSelection").classList.add("hidden");
+            document.getElementById("chapterList").classList.remove("hidden");
+            const chapterList = document.getElementById("chapters");
+            chapterList.innerHTML = "";
+            ncertData[selectedClass][selectedSubject].forEach(chapter => {
+                let li = document.createElement("li");
+                li.textContent = chapter;
+                chapterList.appendChild(li);
+            });
+        }
+        
+        function goBack(section) {
+            document.getElementById("classSelection").classList.add("hidden");
+            document.getElementById("subjectSelection").classList.add("hidden");
+            document.getElementById("chapterList").classList.add("hidden");
+            document.getElementById(section).classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
