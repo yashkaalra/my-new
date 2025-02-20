@@ -14,10 +14,6 @@
             document.querySelectorAll('.subjects').forEach(el => el.classList.add('hidden'));
             document.getElementById('subjects-' + classId).classList.remove('hidden');
         }
-        function showChapters(subjectId) {
-            document.querySelectorAll('.chapters').forEach(el => el.classList.add('hidden'));
-            document.getElementById('chapters-' + subjectId).classList.remove('hidden');
-        }
     </script>
 </head>
 <body>
@@ -27,46 +23,50 @@
         <button class="button" onclick="showSubjects('7')">Class 7</button>
         <button class="button" onclick="showSubjects('8')">Class 8</button>
         <button class="button" onclick="showSubjects('9')">Class 9</button>
-        <button class="button" onclick="showSubjects('10')">Class 10</button><!-- Subjects for each class -->
+        <button class="button" onclick="showSubjects('10')">Class 10</button><!-- Subjects for each class with direct PDF links -->
     <div id="subjects-6" class="subjects hidden">
         <h2>Class 6 Subjects</h2>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?fesc1=0', '_blank')">Science</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?fhs1=0', '_blank')">History</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?fss1=0', '_blank')">Civics</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?feg1=0', '_blank')">Geography</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?fee1=0', '_blank')">Economics</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/fesc101.pdf', '_blank')">Science - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/fhs101.pdf', '_blank')">History - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/fss101.pdf', '_blank')">Civics - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/feg101.pdf', '_blank')">Geography - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/fee101.pdf', '_blank')">Economics - Chapter 1</button>
     </div>
+    
     <div id="subjects-7" class="subjects hidden">
         <h2>Class 7 Subjects</h2>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?gesc1=0', '_blank')">Science</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?ghs1=0', '_blank')">History</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?gss1=0', '_blank')">Civics</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?geg1=0', '_blank')">Geography</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?gee1=0', '_blank')">Economics</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/gesc101.pdf', '_blank')">Science - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/ghs101.pdf', '_blank')">History - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/gss101.pdf', '_blank')">Civics - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/geg101.pdf', '_blank')">Geography - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/gee101.pdf', '_blank')">Economics - Chapter 1</button>
     </div>
+    
     <div id="subjects-8" class="subjects hidden">
         <h2>Class 8 Subjects</h2>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?hesc1=0', '_blank')">Science</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?hhs1=0', '_blank')">History</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?hss1=0', '_blank')">Civics</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?heg1=0', '_blank')">Geography</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?hee1=0', '_blank')">Economics</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/hesc101.pdf', '_blank')">Science - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/hhs101.pdf', '_blank')">History - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/hss101.pdf', '_blank')">Civics - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/heg101.pdf', '_blank')">Geography - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/hee101.pdf', '_blank')">Economics - Chapter 1</button>
     </div>
+    
     <div id="subjects-9" class="subjects hidden">
         <h2>Class 9 Subjects</h2>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?iesc1=0', '_blank')">Science</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?ihs1=0', '_blank')">History</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?iss1=0', '_blank')">Civics</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?ieg1=0', '_blank')">Geography</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?iee1=0', '_blank')">Economics</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/iesc101.pdf', '_blank')">Science - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/ihs101.pdf', '_blank')">History - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/iss101.pdf', '_blank')">Civics - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/ieg101.pdf', '_blank')">Geography - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/iee101.pdf', '_blank')">Economics - Chapter 1</button>
     </div>
+    
     <div id="subjects-10" class="subjects hidden">
         <h2>Class 10 Subjects</h2>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?jesc1=0', '_blank')">Science</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?jhs1=0', '_blank')">History</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?jss1=0', '_blank')">Civics</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?jeg1=0', '_blank')">Geography</button>
-        <button class="button" onclick="window.open('https://ncert.nic.in/textbook.php?jee1=0', '_blank')">Economics</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/jesc101.pdf', '_blank')">Science - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/jhs101.pdf', '_blank')">History - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/jss101.pdf', '_blank')">Civics - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/jeg101.pdf', '_blank')">Geography - Chapter 1</button>
+        <button class="button" onclick="window.open('https://ncert.nic.in/textbook/pdf/jee101.pdf', '_blank')">Economics - Chapter 1</button>
     </div>
 </div>
 
